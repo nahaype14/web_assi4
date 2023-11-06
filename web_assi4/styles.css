@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --heading: 2.25rem;
+    --nav-brand: 1.5rem;
+    --subheading: 1.125rem;
+    --card-label: 1.313rem;
+    --common-size: 1.2rem;
+    --spotify-bar: 1.2rem;
+    --sm-link: 1.125rem;
+}
+
+/* Navigation Bar */
+
+#navbar {
+    margin: 0 auto;
+}
+
+#navbar > nav > div {
+    padding: 0;
+}
+
+.navbar-addition {
+    padding-top: 0;
+    padding-bottom: 0; 
+}
+
+.nav-item-style {
+    margin: 1rem 2rem;
+    font-weight: 500;
+    font-size: var(--common-size);
+}
+
+.nav-brand-style {
+    margin-right: 2rem;
+    /* margin-left: 7.5rem; */
+    margin-bottom: 0.1rem;
+    font-weight: 700;
+    font-size: var(--nav-brand);
+}
+
+/* Playing music on Spotify */
+
+.spotify-color-background {
+    background-color: #1ED760;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
+
+.listening-to-music {
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    font-size: var(--spotify-bar);
+    font-weight: 400;
+    margin: auto;
+}
+
+/* Introduction */
+
+section {
+    width: 65%;
+    margin: 100px auto;
+}
+
+.row {
+    margin-left: 0;
+    margin-top: 5.75rem;
+}
+
+.intro-content {
+    padding: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: var(--heading);
+    margin: 25px 0;
+}
+
+#circle {
+    background-color: #1ED760;
+    border-radius: 8.438rem;
+    height: 16.875rem;
+    width: 16.875rem;
+}
+
+.inter-medium-gray {
+    font-size: var(--subheading);
+    font-weight: 500;
+    color: black;
+    opacity: 0.7;
+    width: 40rem;
+}
+
+/* About me */
+
+.describe-style {
+    font-size: var(--subheading);
+    font-weight: 500;
+    color: black;
+    opacity: 0.7;
+    width: 35rem;
+}
+
+.about-me {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+#rectangle {
+    background-color: #1ED760;
+    border-radius: 0.625rem;
+    height: 28rem;
+    width: 21rem;
+}
+
+/* What do I do? */
+
+.hobbies {
+    display: grid;
+    grid-template-columns: 29rem 29rem;
+    grid-template-rows: auto auto;
+    margin: 1.5625rem 0;
+}
+
+.hobby-item {
+    height: 5.313rem;
+    width: 28.125rem;
+    margin: 7px 0;
+    font-weight: 500;
+    font-size: var(--card-label);
+    border-radius: 0.625rem;
+    background-color: #ffffff;
+    text-align: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+
+    box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.3);
+    border-width: 0;
+    /* border-style: solid;
+    border-color: #1ED760; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 10px 5px; */
+    transition: 0.4s;
+}
+
+.active-accordion, .hobby-item:hover {
+    background-color: #1ED760;
+    color: white;
+
+    /* border-radius: 0; */
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; */
+}
+
+.active-accordion::after {
+    content: url("angle-right-white.svg");
+    transform: rotate(90deg);
+    transition: 0.1s;
+}
+
+.hobby-item::after {
+    content: url("angle-right-white.svg");
+    width: 20px;
+    height: 20px;
+    color: #000000;
+    transition: 0.1s;
+}
+
+#know-more {
+    padding: 20px 2rem;
+    display: none;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+    /* opacity: 0.7; */
+    height: 10rem;
+    width: 28.125rem;
+
+    box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.3);
+    border-width: 0;
+    border-width: 0px;
+    /* border-style: solid;
+    border-color: #1ED760; */
+    border-radius: 0.625rem;
+    /* border-top-left-radius: 0;
+    border-top-right-radius: 0; */
+    border-top: #ffffff;
+    
+    margin-bottom: 10px;
+}
+
+.about-hobby {
+    border-radius: 0.3rem;
+    background-color: #1ED760;
+    height: 2rem;
+    width: 7.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    border-width: 0;
+    margin-bottom: 10px;
+}
+
+.about-hobby:hover::after {
+    content: " »";
+    position: relative;
+    right: 1%;
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.item-label {
+    margin-bottom: 0;
+}
+
+/* #angle-right {
+    width: 20px;
+    height: 20px;
+} */
+
+/* Liked Podcasts */
+
+.podcast {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* box-shadow: 7px 7px 10px -7px rgba(0, 0, 0, 0.2); */
+    /* box-shadow: 11px -8px 10px -7px rgba(0, 0, 0, 0.2); */
+    /* box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.6); */
+}
+
+.podcast-description {
+    font-size: var(--subheading);
+    font-weight: 500;
+    color: black;
+    opacity: 0.8;
+    /* width: 10rem; */
+}
+
+.carousel {
+    position: relative;
+    height: 250px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.carousel__image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+    display: flex;
+    align-items: center;
+}
+
+.carousel__slide {
+    position: absolute;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.carousel__button--left {
+    left: -50px;
+}
+
+.carousel__button--right {
+    right: -50px;
+}
+
+.carousel__button img {
+    width: 30px;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 0.3rem;
+    width: 48px;
+    height: 4px;
+    background: rgba(30, 215, 96, .3);
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background: rgba(30, 215, 96, 1);
+}
+
+.is-hidden {
+    display: none;
+}
+
+/* Contact me */
+
+.contact-me-box {
+    display: flex;
+}
+
+.social-media-part > div {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.social-media-part {
+    margin-left: 10%;
+    margin-top: 1%;
+}
+
+.form-entries {
+    border-radius: 0.625rem;
+    background-color: #C4C4C44D;
+    height: 41px;
+    width: 400px;
+    font-size: var(--common-size);
+    font-weight: 400;
+    padding-left: 1rem;
+    border-width: 0;
+    margin: 5px 0;
+}
+
+.form-entries::placeholder {
+    color: #000000;
+    opacity: 0.6;
+}
+
+#message {
+    height: 114px;
+    padding-top: 10px;
+    min-height: 45px;
+}
+
+#submit {
+    border-radius: 0.625rem;
+    background-color: #1ED760;
+    height: 41px;
+    width: 400px;
+    font-size: var(--common-size);
+    font-weight: 700;
+    color: #ffffff;
+    border-width: 0;
+}
+
+#submit:hover {
+    background-color: #000000;
+}
+
+.inter-regular-black {
+    font-weight: 400;
+    font-size: var(--sm-link);
+    color: #000000;
+    margin-left: 2rem;
+}
+
+:visited {
+    color: #000000
+}
+
+.fa-brands:hover {
+    color: #1ED760;
+    cursor: pointer;
+}
+
+/* Footer */
+
+hr {
+    display: block;
+    /* margin: 1rem auto; */
+}
+
+footer {
+    width: 65%;
+    margin: 2rem auto;
+}
+
+.footer-text {
+    font-size: var(--common-size);
+    font-weight: 500;
+    color: black;
+    opacity: 0.7;
+    margin-left: 1rem;
+    display: inline;
+}
+
+#footer-text-size {
+    font-size: 1rem;
+}
+
+.inter-bold-gray {
+    font-weight: 700;
+    font-size: var(--common-size);
+    color: black;
+    opacity: 0.7;
+    display: inline;
+}
+
+::selection {
+    color: #ffffff;
+    background: #1ED760;
+}
